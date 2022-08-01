@@ -127,7 +127,7 @@ class MRequest implements PermissionRequest, RequestExecutor, BridgeRequest.Call
 
     @Override
     public void onCallback() {
-        new TaskExecutor(mSource.getContext()) {
+        new TaskExecutor() {
             @Override
             protected List<String> doInBackground(Void... voids) {
                 return getDeniedPermissions(DOUBLE_CHECKER, mSource, mPermissions);

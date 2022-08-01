@@ -82,7 +82,7 @@ class LRequest implements PermissionRequest {
 
     @Override
     public void start() {
-        new TaskExecutor(mSource.getContext()) {
+        new TaskExecutor() {
             @Override
             protected List<String> doInBackground(Void... voids) {
                 return getDeniedPermissions(STRICT_CHECKER, mSource, mPermissions);
